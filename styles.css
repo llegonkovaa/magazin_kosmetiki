@@ -1,0 +1,246 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #FF69B4;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+#hero {
+    background: url('fon4.jpg') no-repeat center center/cover;
+    color: black;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+}
+#hero p {
+    font-size: 1.2em;
+}
+#shop-now {
+    background-color: #FF1493;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+#shop-now:hover {
+    background-color: #F2188C;
+}
+
+#services, #contacts {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    width: 30%;
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавный переход */
+}
+
+.product-image {
+    max-width: 100%; /* Ограничиваем ширину изображения */
+    height: auto; /* Поддерживаем пропорции изображения */
+    border-radius: 10px; /* Закругляем углы изображения */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Увеличение карточки при наведении */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Тень при наведении */
+}
+
+footer {
+    background-color: #FF1493;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Эффект наведения для заголовков разделов */
+li:hover {
+    color: #FF1493; /* Изменение цвета заголовка при наведении */
+    cursor: pointer; /* Указатель при наведении */
+}
+/* Стили для модального окна */
+#feedback-form {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Зафиксировано на экране */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+}
+
+#feedback-form > h2 {
+    color: #333;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px; /* Максимальная ширина формы */
+    width: 90%; /* Ширина формы 90% от родителя */
+    margin: auto; /* Центрируем форму */
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Поля занимают 100% ширины родителя */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box; /* Учитываем padding и border в ширине */
+}
+
+textarea {
+    resize: vertical; /* Позволяем изменять размер только по вертикали */
+    min-height: 100px; /* Минимальная высота текстового поля */
+}
+.about {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.stati-container {
+    padding: 30px; /* Увеличенный отступ */
+    background-color: #f0f0f0; /* Светлый фон для контейнера */
+    color: #333; /* Более тёмный цвет текста */
+    border: 1px solid #ddd; /* Добавление границы вокруг контейнера */
+    border-radius: 10px; /* Скругление углов контейнера */
+}
+
+.stati-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Увеличенный промежуток между элементами списка */
+}
+
+.stati-item {
+    display: flex;
+    align-items: center; /* Выравнивание по центру */
+    gap: 15px; /* Уменьшенный промежуток между элементами внутри статей */
+    padding: 15px; /* Уменьшенный внутренний отступ */
+    background-color: #ffffff; /* Белый фон для статей */
+    border: 1px solid #ccc; /* Граница для статей */
+    border-radius: 12px; /* Скругление углов */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень для статей */
+}
+
+.stati-left {
+    flex: 1;
+    max-width: 35%; /* Уменьшение максимальной ширины левой секции */
+}
+
+.stati-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Скругление углов изображения */
+    max-height: 400px; /* Уменьшенная максимальная высота изображения */
+}
+
+.stati-left h2 {
+    font-size: 1.6em; /* Увеличенный размер шрифта заголовка */
+    margin-bottom: 5px; /* Уменьшенный отступ снизу заголовка */
+    color: #000; /* Цвет заголовка */
+}
+
+.stati-right {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 550px; /* Уменьшенная максимальная ширина правой секции */
+    gap: 8px; /* Уменьшенный промежуток между элементами */
+}
+
+.stati-right p {
+    font-size: 1.1em; /* Уменьшенный размер шрифта для текста */
+    color: #555; /* Более светлый цвет текста */
+    line-height: 1.5; /* Уменьшенная высота строки */
+    margin: 0;
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.stati-button {
+    margin-top: 15px; /* Увеличенный отступ сверху для кнопки */
+    padding: 10px 20px; /* Увеличенные внутренние отступы кнопки */
+    background-color: #FF1493; /* Новый цвет фона кнопки */
+    color: #ffffff; /* Белый цвет текста кнопки */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Плавный переход для фона и трансформации */
+    border-radius: 25px; /* Скругление углов кнопки */
+    align-self: flex-start;
+    font-weight: bold; /* Жирный шрифт для текста кнопки */
+}
+
+.stati-button:hover {
+    background-color: #F2188C; /* Более тёмный цвет фона при наведении */
+    transform: scale(1.05); /* Увеличение кнопки при наведении */
+}
+.icon-link {
+    display: inline-block; /* Позволяет добавлять отступы вокруг иконки */
+    margin-top: 15px; /* Отступ сверху */
+}
+
+.icon {
+    width: 40px; /* Ширина иконки */
+    height: 40px; /* Высота иконки */
+    transition: transform 0.2s; /* Плавный переход при наведении */
+}
+
+.icon-link:hover .icon {
+    transform: scale(1.1); /* Увеличение иконки при наведении */
+}
